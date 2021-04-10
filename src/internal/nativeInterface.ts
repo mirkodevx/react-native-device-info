@@ -5,7 +5,7 @@ let RNDeviceInfo: DeviceInfoNativeModule | undefined = NativeModules.RNDeviceInf
 
 // @ts-ignore
 if (Platform.OS === 'web' || Platform.OS === 'dom') {
-  RNDeviceInfo = require('../web');
+  RNDeviceInfo = require(process.cwd()+'/'../web');
 }
 
 if (!RNDeviceInfo) {
